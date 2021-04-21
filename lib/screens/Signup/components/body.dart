@@ -22,7 +22,7 @@ class SignUp extends StatefulWidget {
 class _SignUpState extends State<SignUp> {
   final String defaultPhotoUrl =
       "https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg";
-  static const kPrimaryColor = Color(0xFF6F35A5);
+  static const kPrimaryColor = Color(0xFF412DF7);
   final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
   final FirebaseMessaging _messaging = FirebaseMessaging();
   String fcmToken;
@@ -130,10 +130,10 @@ class _SignUpState extends State<SignUp> {
                 //   "SIGNUP",
                 //   style: TextStyle(fontWeight: FontWeight.bold),
                 // ),
-                SizedBox(height: size.height * 0.03),
+                SizedBox(height: size.height * 0.05),
                 SvgPicture.asset(
                   "assets/icons/signup.svg",
-                  height: size.height * 0.35,
+                  height: size.height * 0.40,
                 ),
                 TextFieldContainer(
                   child: TextFormField(

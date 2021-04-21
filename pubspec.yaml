@@ -45,7 +45,8 @@ dependencies:
   flutter_ringtone_player: 
   focused_menu:
   splash_screen_view: 
-
+  google_sign_in:
+  
 dev_dependencies:
   flutter_launcher_icons: "^0.8.0"
   flutter_test:

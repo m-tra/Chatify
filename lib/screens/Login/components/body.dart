@@ -12,6 +12,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:Chatify/widgets/Progresswidget.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 class SignIn extends StatefulWidget {
   @override
@@ -20,9 +21,10 @@ class SignIn extends StatefulWidget {
 
 class _SignInState extends State<SignIn> {
   SharedPreferences preferences;
-
+  final String defaultPhotoUrl =
+      "https://moonvillageassociation.org/wp-content/uploads/2018/06/default-profile-picture1.jpg";
   final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
-  static const kPrimaryColor = Color(0xFF6F35A5);
+  static const kPrimaryColor = Color(0xFF412DF7);
   final FirebaseMessaging _messaging = FirebaseMessaging();
   String fcmToken;
   TextEditingController emailEditingController = new TextEditingController();
@@ -117,7 +119,9 @@ class _SignInState extends State<SignIn> {
                     ),
                     suffixIcon: IconButton(
                       icon: Icon(
-                        _passwordVisible ? Icons.visibility_off : Icons.visibility,
+                        _passwordVisible
+                            ? Icons.visibility_off
+                            : Icons.visibility,
                         color: kPrimaryColor,
                       ),
                       onPressed: () {
@@ -156,6 +160,8 @@ class _SignInState extends State<SignIn> {
                   );
                 },
               ),
+              _buildTextSignIn(),
+              _buildSocialSignIn(),
             ],
           ),
         ),
@@ -201,7 +207,6 @@ class _SignInState extends State<SignIn> {
         await preferences.setString("name", datasnapshot.data["name"]);
         await preferences.setString("photo", datasnapshot.data["photoUrl"]);
         await preferences.setString("email", datasnapshot.data["email"]);
-
         this.setState(() {
           isloading = false;
         });
@@ -219,5 +224,130 @@ class _SignInState extends State<SignIn> {
       });
       Fluttertoast.showToast(msg: "Login Failed");
     }
+  }
+
+  signInWithGoogle(BuildContext context) async {
+    this.setState(() {
+      isloading = true;
+    });
+    preferences = await SharedPreferences.getInstance();
+    final GoogleSignInAccount googleUser = await GoogleSignIn().signIn();
+    final GoogleSignInAuthentication googleAuth =
+        await googleUser.authentication;
+
+    final AuthCredential credential = GoogleAuthProvider.getCredential(
+      accessToken: googleAuth.accessToken,
+      idToken: googleAuth.idToken,
+    );
+    final FirebaseUser user =
+        (await _auth.signInWithCredential(credential)).user;
+    if (user != null) {
+      final QuerySnapshot result = await Firestore.instance
+          .collection("Users")
+          .where("uid", isEqualTo: user.uid)
+          .getDocuments();
+      if (result.documents.length == 0) {
+        Firestore.instance.collection("Users").document(user.uid).setData({
+          "uid": user.uid,
+          "email": user.email,
+          "name": "NewUser",
+          "photoUrl": defaultPhotoUrl,
+          "createdAt": DateTime.now().millisecondsSinceEpoch.toString(),
+          "state": 1,
+          "lastSeen": DateTime.now().millisecondsSinceEpoch.toString(),
+          "fcmToken": fcmToken
+        });
+        FirebaseUser currentuser = user;
+        await preferences.setString("uid", currentuser.uid);
+        await preferences.setString("name", "NewUser");
+        await preferences.setString("photo", defaultPhotoUrl);
+        await preferences.setString("email", currentuser.email);
+      } else {
+        // FirebaseUser currentuser = firebaseUser;
+        await preferences.setString("uid", result.documents[0]["uid"]);
+        await preferences.setString("name", result.documents[0]["name"]);
+        await preferences.setString("photo", result.documents[0]["photoUrl"]);
+        await preferences.setString("email", result.documents[0]["email"]);
+      }
+      this.setState(() {
+        isloading = false;
+      });
+      Navigator.pop(context);
+      Route route = MaterialPageRoute(
+          builder: (c) => HomeScreen(
+                currentuserid: user.uid,
+              ));
+      Navigator.pushReplacement(context, route);
+    }
+  }
+
+  Widget _buildTextSignIn() {
+    return Column(
+      children: <Widget>[
+        Text(
+          '- OR LOG IN WITH  -',
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+        SizedBox(
+          height: 10.0,
+        )
+      ],
+    );
+  }
+
+  Widget _buildSocialSignIn() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 0.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          GestureDetector(
+            onTap: () => print('Login with Facebook'),
+            child: Container(
+              height: 60.0,
+              width: 60.0,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black26,
+                    offset: Offset(0, 2),
+                    blurRadius: 6.0,
+                  )
+                ],
+                image: DecorationImage(
+                  image: AssetImage('assets/images/facebook.png'),
+                ),
+              ),
+            ),
+          ),
+          GestureDetector(
+            onTap: () => signInWithGoogle(context),
+            child: Container(
+              height: 60.0,
+              width: 60.0,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black26,
+                    offset: Offset(0, 2),
+                    blurRadius: 6.0,
+                  )
+                ],
+                image: DecorationImage(
+                  image: AssetImage('assets/images/google.png'),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
