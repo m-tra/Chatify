@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "98855559808",
+    "project_id": "hello-word-53eeb",
+    "storage_bucket": "hello-word-53eeb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:98855559808:android:94dfd1104a9f84b4e87c65",
+        "android_client_info": {
+          "package_name": "com.pa8.hello_word"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "98855559808-4jqod8mi57tr3fog55ollnc4t53u8h8b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pa8.hello_word",
+            "certificate_hash": "7d32c5aff3ca6ac073f4acaef1a8a721658c56cd"
+          }
+        },
+        {
+          "client_id": "98855559808-lnjdmunr6btnbuhc3o8v64tcufe1l22d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pa8.hello_word",
+            "certificate_hash": "b2e489c2043d70e0e6a8c6da7ae93b9643dfde64"
+          }
+        },
+        {
+          "client_id": "98855559808-uv4f2jp8o1pbbj8upkcvhcki7n45a8to.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCs6k9mqj5YY6za3WTFxGuClMIXybTaF0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "98855559808-uv4f2jp8o1pbbj8upkcvhcki7n45a8to.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "98855559808-0urj3r5qk071tjnceks4jughg8ahnnpt.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.helloWorld"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
