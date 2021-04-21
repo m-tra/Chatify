@@ -167,7 +167,9 @@ class _CallScreenState extends State<CallScreen> {
         .listen((DocumentSnapshot ds) {
       switch (ds.data) {
         case null:
-          // snapshot is null i.e. the call is hanged and document is deleted
+          // snapshot is null i.e. the call
+          //
+          //  is hanged and document is deleted
           Navigator.pop(context);
           break;
 

@@ -1,4 +1,4 @@
 const FCM_SERVER_KEY =
     'AAAAFwRAIoA:APA91bGrT4DKdYz6T9_HOUXe_y7cCZAAghUPUpwVjrkKR4T-jmSgOQ6tMthaPjY-XFzgUaBtyNRRA_bOcy2iALCD2nYuq30639jR_SeRRLVGpObUaysEZkqH18iziCu9ZCXa1iFcdhcO';
-const APP_ID = 'd57b5db7f6cc47d99afe00be3cbd83d1';
+const APP_ID = 'cf5c947759df4828bfd36a03eb9043ba';
 const GIPHY_API_KEY = '2YeiC86AdVgJuFvHfIhrS12k3IfsTfF8';
