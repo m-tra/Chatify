@@ -1,4 +1,4 @@
-import 'package:Chatify/constants.dart';
+import 'package:sport_buddies/constants.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -8,7 +8,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:splash_screen_view/SplashScreenView.dart';
 import 'HomeScreen.dart';
-import 'package:Chatify/screens/Welcome/welcome_screen.dart';
+import 'package:sport_buddies/screens/Welcome/welcome_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
