@@ -1,17 +1,17 @@
-import 'package:Chatify/screens/HomeScreen.dart';
+import 'package:sport_buddies/screens/HomeScreen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
-import 'package:Chatify/screens/Login/components/background.dart';
-import 'package:Chatify/screens/Signup/signup_screen.dart';
-import 'package:Chatify/components/already_have_an_account_acheck.dart';
-import 'package:Chatify/components/rounded_button.dart';
-import 'package:Chatify/components/text_field_container.dart';
+import 'package:sport_buddies/screens/Login/components/background.dart';
+import 'package:sport_buddies/screens/Signup/signup_screen.dart';
+import 'package:sport_buddies/components/already_have_an_account_acheck.dart';
+import 'package:sport_buddies/components/rounded_button.dart';
+import 'package:sport_buddies/components/text_field_container.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:Chatify/widgets/Progresswidget.dart';
+import 'package:sport_buddies/widgets/Progresswidget.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class SignIn extends StatefulWidget {

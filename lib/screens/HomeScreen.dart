@@ -1,11 +1,9 @@
-import 'package:Chatify/screens/AccountSettings/AccountSettingsPage.dart';
-import 'package:Chatify/screens/CallLogs/log_screen.dart';
-import 'package:Chatify/screens/Chats/Chats.dart';
-import 'package:Chatify/screens/Chats/UserList.dart';
-import 'package:Chatify/constants.dart';
-import 'package:Chatify/enum/user_state.dart';
-import 'package:Chatify/resources/user_state_methods.dart';
-import 'package:Chatify/screens/CallScreens/pickup/pickup_layout.dart';
+import 'package:sport_buddies/screens/AccountSettings/AccountSettingsPage.dart';
+import 'package:sport_buddies/screens/Map/map_screen.dart';
+import 'package:sport_buddies/screens/Chats/Chats.dart';
+import 'package:sport_buddies/constants.dart';
+import 'package:sport_buddies/enum/user_state.dart';
+import 'package:sport_buddies/resources/user_state_methods.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
@@ -78,11 +76,8 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
   @override
   Widget build(BuildContext context) {
-    return PickupLayout(
-      uid: currentuserid,
-      scaffold: Scaffold(
-        body: MyStatefulWidget(),
-      ),
+    return Scaffold(
+      body: MyStatefulWidget(),
     );
   }
 }
@@ -96,12 +91,9 @@ class MyStatefulWidget extends StatefulWidget {
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   List<Widget> _widgetOptions = <Widget>[
+    MapScreen(),
     ChatsPage(),
-    UserList(),
-    LogScreen(),
     Settings(),
   ];
 
@@ -126,29 +118,22 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           Padding(
             padding: EdgeInsets.all(10.0),
             child: Icon(
-              Icons.chat,
+              Icons.map_outlined,
               color: _selectedIndex == 0 ? kPrimaryColor : Colors.black,
             ),
           ),
           Padding(
             padding: EdgeInsets.all(10.0),
             child: Icon(
-              Icons.supervised_user_circle,
+              Icons.chat,
               color: _selectedIndex == 1 ? kPrimaryColor : Colors.black,
             ),
           ),
           Padding(
             padding: EdgeInsets.all(10.0),
             child: Icon(
-              Icons.call,
-              color: _selectedIndex == 2 ? kPrimaryColor : Colors.black,
-            ),
-          ),
-          Padding(
-            padding: EdgeInsets.all(10.0),
-            child: Icon(
               Icons.person_outline,
-              color: _selectedIndex == 3 ? kPrimaryColor : Colors.black,
+              color: _selectedIndex == 2 ? kPrimaryColor : Colors.black,
             ),
           ),
         ],

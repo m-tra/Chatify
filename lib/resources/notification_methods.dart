@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:Chatify/configs/configs.dart';
+import 'package:sport_buddies/configs/configs.dart';
 
 Future<bool> sendPushNotification(
     String name, String userToken, String body, String image) async {

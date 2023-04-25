@@ -1,7 +1,7 @@
-import 'package:Chatify/utils/utils.dart';
-import 'package:Chatify/constants.dart';
-import 'package:Chatify/enum/user_state.dart';
-import 'package:Chatify/resources/user_state_methods.dart';
+import 'package:sport_buddies/utils/utils.dart';
+import 'package:sport_buddies/constants.dart';
+import 'package:sport_buddies/enum/user_state.dart';
+import 'package:sport_buddies/resources/user_state_methods.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 

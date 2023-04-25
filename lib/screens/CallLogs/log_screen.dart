@@ -1,5 +1,5 @@
-import 'package:Chatify/constants.dart';
-import 'package:Chatify/screens/CallLogs/log_list_container.dart';
+import 'package:sport_buddies/constants.dart';
+import 'package:sport_buddies/screens/CallLogs/log_list_container.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

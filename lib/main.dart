@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:Chatify/constants.dart';
+import 'package:sport_buddies/constants.dart';
 import 'Screens/SplashScreen.dart';
 
 void main() {
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Hello Word',
+      title: 'Sport Buddies',
       theme: ThemeData(
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: Colors.white,

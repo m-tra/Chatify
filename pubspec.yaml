@@ -1,5 +1,5 @@
-name: Chatify
-description: A new Flutter project.
+name: sport_buddies
+description: Make friends and pratice sport 
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
@@ -32,7 +32,7 @@ dependencies:
   firebase_storage:
   cached_network_image: 
   intl: 
-  firebase_messaging: 
+  firebase_messaging:  
   photo_view:
   http:
   font_awesome_flutter:
@@ -40,17 +40,17 @@ dependencies:
   giphy_picker:
   popup_menu: 
   curved_navigation_bar:
-  agora_rtc_engine: 
   permission_handler:
   flutter_ringtone_player: 
   focused_menu:
   splash_screen_view: 
   google_sign_in:
+  google_maps_flutter:
   
 dev_dependencies:
   flutter_launcher_icons: "^0.8.0"
-  flutter_test:
-    sdk: flutter
+  test:
+
 flutter_icons:
   android: "launcher_icon"
   ios: true

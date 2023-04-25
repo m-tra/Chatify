@@ -15,7 +15,7 @@
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="Hello Word"
+        android:label="Sport Buddies"
         android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
@@ -43,5 +43,7 @@
         <meta-data
         android:name="com.google.firebase.messaging.default_notification_icon"
         android:resource="@drawable/notification_icon" />
+        <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyBFQawbSBm1cpaniwFLxfGEB2-TJORhOl4"/>
     </application>
 </manifest>

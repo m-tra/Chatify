@@ -1,5 +1,5 @@
-import 'package:Chatify/constants.dart';
-import 'package:Chatify/widgets/ProgressWidget.dart';
+import 'package:sport_buddies/constants.dart';
+import 'package:sport_buddies/widgets/ProgressWidget.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';

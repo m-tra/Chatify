@@ -1,5 +1,5 @@
-import 'package:Chatify/enum/user_state.dart';
-import 'package:Chatify/enum/message_type.dart';
+import 'package:sport_buddies/enum/user_state.dart';
+import 'package:sport_buddies/enum/message_type.dart';
 
 class Utils {
   static int stateToNum(UserState userState) {

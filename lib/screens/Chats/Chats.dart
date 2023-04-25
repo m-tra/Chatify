@@ -1,5 +1,5 @@
-import 'package:Chatify/components/chat_for_chats_screen.dart';
-import 'package:Chatify/constants.dart';
+import 'package:sport_buddies/components/chat_for_chats_screen.dart';
+import 'package:sport_buddies/constants.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';

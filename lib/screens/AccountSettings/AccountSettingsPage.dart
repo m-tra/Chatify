@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'dart:io';
-import 'package:Chatify/widgets/ProgressWidget.dart';
-import 'package:Chatify/constants.dart';
-import 'package:Chatify/resources/user_state_methods.dart';
+import 'package:sport_buddies/widgets/ProgressWidget.dart';
+import 'package:sport_buddies/constants.dart';
+import 'package:sport_buddies/resources/user_state_methods.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';

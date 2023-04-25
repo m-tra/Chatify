@@ -1,5 +1,5 @@
-import 'package:Chatify/screens/ChatDetail/ChattingPage.dart';
-import 'package:Chatify/widgets/StatusIndicator.dart';
+import 'package:sport_buddies/screens/ChatDetail/ChattingPage.dart';
+import 'package:sport_buddies/widgets/StatusIndicator.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';

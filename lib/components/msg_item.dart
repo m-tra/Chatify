@@ -1,7 +1,7 @@
-import 'package:Chatify/constants.dart';
-import 'package:Chatify/enum/message_type.dart';
-import 'package:Chatify/utils/utils.dart';
-import 'package:Chatify/widgets/FullImageWidget.dart';
+import 'package:sport_buddies/constants.dart';
+import 'package:sport_buddies/enum/message_type.dart';
+import 'package:sport_buddies/utils/utils.dart';
+import 'package:sport_buddies/widgets/FullImageWidget.dart';
 import 'package:bubble/bubble.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';

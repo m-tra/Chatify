@@ -103,7 +103,7 @@ class _SplashScreenState extends State<SplashScreen>
           : WelcomeScreen(),
       duration: 5500,
       imageSrc: "assets/images/icon_new.png",
-      text: "Hello Word",
+      text: "Sport Buddies",
       textType: TextType.ColorizeAnimationText,
       textStyle: TextStyle(fontSize: 40.0, fontFamily: 'Courgette'),
       colors: [

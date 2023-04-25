@@ -39,8 +39,8 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.pa8.hello_word"
-        minSdkVersion 16
+        applicationId "com.sudo.sport_b"
+        minSdkVersion 20
         targetSdkVersion 28
         multiDexEnabled true
         versionCode flutterVersionCode.toInteger()
@@ -65,10 +65,13 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.1'
-    implementation platform('com.google.firebase:firebase-bom:27.0.0')
+    implementation platform('com.google.firebase:firebase-bom:28.1.0')
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-messaging:20.1.4'
     implementation 'com.android.support:multidex:1.0.3'
+    implementation("com.google.firebase:firebase-iid")
 }
 
 apply plugin: 'com.google.gms.google-services'

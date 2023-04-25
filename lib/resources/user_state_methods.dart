@@ -1,6 +1,6 @@
-import 'package:Chatify/screens/Welcome/welcome_screen.dart';
-import 'package:Chatify/utils/utils.dart';
-import 'package:Chatify/enum/user_state.dart';
+import 'package:sport_buddies/screens/Welcome/welcome_screen.dart';
+import 'package:sport_buddies/utils/utils.dart';
+import 'package:sport_buddies/enum/user_state.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';

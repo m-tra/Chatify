@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:Chatify/screens/Welcome/components/body.dart';
+import 'package:sport_buddies/screens/Welcome/components/body.dart';
 
 class WelcomeScreen extends StatelessWidget {
   @override

@@ -1,57 +1,51 @@
 {
   "project_info": {
-    "project_number": "98855559808",
-    "project_id": "hello-word-53eeb",
-    "storage_bucket": "hello-word-53eeb.appspot.com"
+    "project_number": "57996515592",
+    "firebase_url": "https://sport-buddies-33930.firebaseio.com",
+    "project_id": "sport-buddies-33930",
+    "storage_bucket": "sport-buddies-33930.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:98855559808:android:94dfd1104a9f84b4e87c65",
+        "mobilesdk_app_id": "1:57996515592:android:5b39ca5f2009f2d71bb4bd",
         "android_client_info": {
-          "package_name": "com.pa8.hello_word"
+          "package_name": "com.sudo.sport_b"
         }
       },
       "oauth_client": [
         {
-          "client_id": "98855559808-4jqod8mi57tr3fog55ollnc4t53u8h8b.apps.googleusercontent.com",
+          "client_id": "57996515592-sm56bb184decmrp0as0f0vkjum7712qo.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.pa8.hello_word",
-            "certificate_hash": "7d32c5aff3ca6ac073f4acaef1a8a721658c56cd"
-          }
-        },
-        {
-          "client_id": "98855559808-lnjdmunr6btnbuhc3o8v64tcufe1l22d.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.pa8.hello_word",
+            "package_name": "com.sudo.sport_b",
             "certificate_hash": "b2e489c2043d70e0e6a8c6da7ae93b9643dfde64"
           }
         },
         {
-          "client_id": "98855559808-uv4f2jp8o1pbbj8upkcvhcki7n45a8to.apps.googleusercontent.com",
+          "client_id": "57996515592-uc2fm1i5l41fiqh0d7thjkkr03qvn58l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sudo.sport_b",
+            "certificate_hash": "c86f553b6b266db7e728a47c7dc0b4026042bdf3"
+          }
+        },
+        {
+          "client_id": "57996515592-rq1rs4um33h2jg0kuuqdsa50c7gn5oa1.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDCs6k9mqj5YY6za3WTFxGuClMIXybTaF0"
+          "current_key": "AIzaSyBFQawbSBm1cpaniwFLxfGEB2-TJORhOl4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "98855559808-uv4f2jp8o1pbbj8upkcvhcki7n45a8to.apps.googleusercontent.com",
+              "client_id": "57996515592-rq1rs4um33h2jg0kuuqdsa50c7gn5oa1.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "98855559808-0urj3r5qk071tjnceks4jughg8ahnnpt.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.helloWorld"
-              }
             }
           ]
         }

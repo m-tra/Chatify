@@ -1,19 +1,18 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:Chatify/components/chat_detail_page_appbar.dart';
-import 'package:Chatify/components/msg_item.dart';
-import 'package:Chatify/components/sticker_gif.dart';
-import 'package:Chatify/configs/configs.dart';
-import 'package:Chatify/constants.dart';
-import 'package:Chatify/enum/message_type.dart';
-import 'package:Chatify/resources/notification_methods.dart';
-import 'package:Chatify/screens/CallScreens/pickup/pickup_layout.dart';
-import 'package:Chatify/utils/utils.dart';
+import 'package:sport_buddies/components/chat_detail_page_appbar.dart';
+import 'package:sport_buddies/components/msg_item.dart';
+import 'package:sport_buddies/components/sticker_gif.dart';
+import 'package:sport_buddies/configs/configs.dart';
+import 'package:sport_buddies/constants.dart';
+import 'package:sport_buddies/enum/message_type.dart';
+import 'package:sport_buddies/resources/notification_methods.dart';
+import 'package:sport_buddies/utils/utils.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
-import 'package:Chatify/widgets/ProgressWidget.dart';
+import 'package:sport_buddies/widgets/ProgressWidget.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:giphy_picker/giphy_picker.dart';
 import 'package:image_picker/image_picker.dart';
@@ -24,7 +23,6 @@ class Chat extends StatelessWidget {
   final String receiverId;
   final String receiverAvatar;
   final String receiverName;
-
   final String currUserId;
   final String currUserAvatar;
   final String currUserName;
@@ -41,21 +39,18 @@ class Chat extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PickupLayout(
-      uid: currUserId,
-      scaffold: Scaffold(
-        appBar: ChatDetailPageAppBar(
-          receiverName: receiverName,
-          receiverAvatar: receiverAvatar,
-          receiverId: receiverId,
-          currUserId: currUserId,
-          currUserAvatar: currUserAvatar,
-          currUserName: currUserName,
-        ),
-        body: ChatScreen(
-          receiverId: receiverId,
-          receiverAvatar: receiverAvatar,
-        ),
+    return Scaffold(
+      appBar: ChatDetailPageAppBar(
+        receiverName: receiverName,
+        receiverAvatar: receiverAvatar,
+        receiverId: receiverId,
+        currUserId: currUserId,
+        currUserAvatar: currUserAvatar,
+        currUserName: currUserName,
+      ),
+      body: ChatScreen(
+        receiverId: receiverId,
+        receiverAvatar: receiverAvatar,
       ),
     );
   }
@@ -478,7 +473,9 @@ class ChatScreenState extends State<ChatScreen> {
           ? contentMsg
           : type == MessageType.Image
               ? "Image"
-              : type == MessageType.Gif ? "GIF" : "Sticker";
+              : type == MessageType.Gif
+                  ? "GIF"
+                  : "Sticker";
       String image = type == MessageType.Image ? contentMsg : "";
 
       sendPushNotification(
